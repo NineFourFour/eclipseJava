@@ -59,12 +59,12 @@ public class Email {
 	public double getMaxStorageLimit(){
 		return this.maxStorageLimit;
 	}
-	private String getStorageLimit(){
+	/*private String getStorageLimit(){
 		if(this.maxStorageLimit > 1000)
 			return "1TB";
 		else
 			return this.maxStorageLimit+"GB";
-	}
+	}*/
 	public String toString(){
 		return "Email Address: "+this.emailAddress+"\tPassword: "+this.password+"\tMax Storage Limit: "+((maxStorageLimit > 1000)? "1TB":maxStorageLimit+"GB");
 	/*instead of using the method getStorage(), use ((maxStorageLimit == 1024)? "TB":"GB") */
