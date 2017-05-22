@@ -26,13 +26,33 @@ public class PersonalComputer {
 	public static final String OS_Microsoft = "Windows 10";
 	public static final String OS_Mac = "4.7 Mac OS X 10.5 Leopard";
 	public static final String OS_Ubuntu = "Ubuntu 16.04.2 LTS";
+	
+	/*	POSSIBLE EXAM QUESTION
+	 * 
+	 * static initialization block, can be use to initialize the variables
+	 *  static variables belong to the class not the object, they exist before the member variables
+	 *  
+	 *  A class is the template for an object so must exist before the object is created
+	 *  
+	 *  A final variable must be initialized, i.e. it must be given a value on the same line or in
+	 *  a static block.
+	 *  it can't be given a value in a constructor. 
+	 *  
+	 *  A static block will execute before anything else in the class.  
+	 *  static{
+	 *  	OS_Microsoft = "Windows 10";
+	 *		OS_Mac = "4.7 Mac OS X 10.5 Leopard";
+	 *		OS_Ubuntu = "Ubuntu 16.04.2 LTS";
+	 *  }
+	 *  
+	 */
 	/*is this the default constructor or a zero parameter constructor, with default values*/
 	public PersonalComputer(){
 		this.pcNumber = number++;
-		this.ram = 4;
-		this.hardDrive = 128;
-		this.OS = "Windows7";
-		this.monitorSize = 12;
+		this.ram = RAM_4_GB;
+		this.hardDrive = HardDrive_128_GB;
+		this.OS = OS_Microsoft;
+		this.monitorSize = MonitorSize_12;
 		this.cost = 500;
 	}
 	public PersonalComputer(PcConfigs pcConFig){
