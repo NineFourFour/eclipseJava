@@ -2,10 +2,11 @@ package sheet9Inheritence;
 
 public class Bed extends Furniture {
 	
-	boolean hasHeadboard;
-	String size;
+	private boolean hasHeadboard;
+	private String size;
 	
 	public Bed (){
+		/*inherit the furniture class*/
 		super();
 	}
 	public Bed(String colour, String materialType, boolean hasHeadboard, String size){
@@ -26,7 +27,7 @@ public class Bed extends Furniture {
 		return this.size;
 	}
 	public String toString(){
-		return " "+this.colour+"\t"+this.materialType+"\t\t"+this.hasHeadboard+"\t\t"+this.size;
+		return "Colour: "+getColour()+"\tMaterial type: "+getMaterialType()+"\t\tHeadboard: "+(this.hasHeadboard?"Yes":"No")+"\t\tSize: "+this.size;
 	}
 
 }

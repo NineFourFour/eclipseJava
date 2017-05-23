@@ -6,14 +6,14 @@ public class TestClass {
 		System.out.printf("\n\tInheritence: Furniture, parent class; Bed, Chair, Table are the subclasses\n\n\n");
 		/*Furniture parent class*/
 		Furniture one = new Furniture();
-		System.out.printf("\n\tFurniture one.toString() : %s", one.toString());
+		System.out.printf("\n\tFurniture one : %s\n", one);
 		
 		
 		
 		
 		/*Table subclass*/
 		Table myTable = new Table();
-		System.out.printf("\n\tNew table myTable.toString() : %s",myTable.toString());
+		System.out.printf("\n\tNew table myTable.toString() : %s",myTable);
 		System.out.printf("\n\tmyTable.setColor(red) : ");
 		myTable.setColour("red");
 		System.out.printf("\n\tmyTable.getColor(): %s",myTable.getColour());
@@ -26,8 +26,7 @@ public class TestClass {
 		System.out.printf("\n\tmyTable.setShape(\"round\") :");
 		myTable.setShape("round");
 		System.out.printf("\n\tmyTable.getShape() : %s",myTable.getShape());
-		System.out.printf("\n\n\t\t\t   Color\tMaterial\tisExpandable\tShape");
-		System.out.printf("\n\n\tmyTable.toString():%s\n\n",myTable.toString());
+		System.out.printf("\n\n\tmyTable.toString():%s\n\n",myTable);
 		
 		
 		
@@ -47,28 +46,26 @@ public class TestClass {
 		System.out.printf("\n\tofficeChair.setType(\"office\") :");
 		officeChair.setType("office");
 		System.out.printf("\n\tofficeChair.getType() : %s",officeChair.getType());
-		System.out.printf("\n\n\t\t\t\t Color\tMaterial  hasGasLift\tType");
-		System.out.printf("\n\n\tofficeChair.toString(): %s\n\n",officeChair.toString());
+		System.out.printf("\n\n\tofficeChair.toString(): %s\n\n",officeChair);
 		
 		
 		
 		/*Bed SubClass*/
 		Bed myBed = new Bed();
 		System.out.printf("\n\tNew Bed myBed.toString() : %s", myBed.toString());
-		System.out.printf("\n\n\tmyBed.setColor(\"White\") : ");
+		System.out.printf("\n\n\tmyBed.setColor(\"White\")");
 		myBed.setColour("White");
 		System.out.printf("\n\tmyBed.getColor(): %s",myBed.getColour());
-		System.out.printf("\n\tmyBed.setMaterialType(\"steel\") :");
+		System.out.printf("\n\tmyBed.setMaterialType(\"steel\")");
 		myBed.setMaterialType("Steel");
 		System.out.printf("\n\tmyBed.getMaterialType() : %s",myBed.getMaterialType());
-		System.out.printf("\n\tmyBed.setHasHeadboard(true): ");
+		System.out.printf("\n\tmyBed.setHasHeadboard(true)");
 		myBed.setHasHeadboard(true);;
 		System.out.printf("\n\tmyBed.hasHeadboard(): %s",myBed.hasHeadboard());
-		System.out.printf("\n\tmyBed.setSize(\"14 ft X 7 ft\") :");
-		myBed.setSize("14 ft X 7 ft");;
+		System.out.printf("\n\tmyBed.setSize(\"14 ft X 7 ft\")");
+		myBed.setSize("14 ft X 7 ft");
 		System.out.printf("\n\tmyBed.getSize() : %s",myBed.getSize());
-		System.out.printf("\n\n\t\t\t   Color\tMaterial\thasHeadboard\tsize");
-		System.out.printf("\n\n\tmyBed.toString(): %s",myBed.toString());
+		System.out.printf("\n\n\tmyBed.toString(): %s",myBed);
 		
 		
 		

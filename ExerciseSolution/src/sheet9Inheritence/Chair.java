@@ -2,8 +2,8 @@ package sheet9Inheritence;
 
 public class Chair extends Furniture{
 	
-	boolean hasGasLift;
-	String type;
+	private boolean hasGasLift;
+	private String type;
 	
 	public Chair(){
 		super();
@@ -28,7 +28,7 @@ public class Chair extends Furniture{
 	}
 	
 	public String toString(){
-		return " "+this.colour+"\t"+this.materialType+"\t\t"+this.hasGasLift+"\t"+this.type;
+		return "Chair color: "+getColour()+"\tMaterialType: "+getMaterialType()+"\t\tHas Gas Lift: "+(this.hasGasLift?"Yes":"No")+"\tType of use: "+this.type;
 	}	
 	
 }

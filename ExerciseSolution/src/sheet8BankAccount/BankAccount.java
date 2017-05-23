@@ -3,20 +3,21 @@ package sheet8BankAccount;
 //import sheet4Arrays.Ex3SumOfTwoArrays;
 
 public class BankAccount {
-	String name;
-	String address;
-	int accountNumber;
-	double balance;
+	private String name;
+	private String address;
+	private int accountNumber;
+	private double balance;
 	
 	static double interestRate = 7;
 	static int numberOfAccounts = 0;
 	static int accountNum = 40005100;
 	
-/*default constructor has the same access modifier as the class
- * 					  has no arguments
- * 					  includes a no-arg call to the super constructor, super()*/
-	public BankAccount(){
-		super();
+/*
+ *  default constructor has the same access modifier as the class has no-arguments constructor
+ *
+ * */
+	/*no-args constructor, accountNum and numberOfAccounts are incremented every time an object is created*/
+	public BankAccount(){	
 		accountNum++;
 		numberOfAccounts++;
 	}

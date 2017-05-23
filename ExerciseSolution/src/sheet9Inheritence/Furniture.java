@@ -2,11 +2,11 @@ package sheet9Inheritence;
 
 public class Furniture {
 	
-	String colour;
-	String materialType;
+	private String colour;
+	private String materialType;
 	/*constructors for class*/
 	public Furniture(){
-		super();
+		
 	}
 	public Furniture(String colour, String materialType){
 		this.colour = colour;

@@ -2,7 +2,7 @@ package sheet10Inheritance_enum;
 
 
 public class Circle extends Shape{
-	int radius;
+	private int radius;
 	
 	public Circle(){
 		super();
@@ -21,6 +21,6 @@ public class Circle extends Shape{
 		System.out.printf("\n\tDraw a circle with a radius of: %d\n", this.radius);
 	}
 	public String toString(){
-		return this.color+"\t"+this.radius;
+		return "\tCircle to String : "+getColor()+"\t"+this.radius;
 	}
 }

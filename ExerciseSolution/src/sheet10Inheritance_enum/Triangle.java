@@ -9,6 +9,6 @@ public class Triangle extends Shape {
 		super(code);
 	}
 	public void draw(){
-		System.out.printf("\n\tDraw Triangle with the color: %s\n", this.color);
+		System.out.printf("\n\tDraw Triangle with the color: %s\n", getColor());
 	}
 }

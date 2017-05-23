@@ -1,9 +1,9 @@
 package sheet10Inheritance_enum;
 
 public class Rectangle extends Shape {
-	double height;
-	double width;
-	double area;
+	private double height;
+	private double width;
+	Color code;
 	
 	public Rectangle(){
 		super();
@@ -32,7 +32,7 @@ public class Rectangle extends Shape {
 		System.out.printf("\n\tDraw a rectangle of height: %.2f and width: %.2f\n", this.height, this.width);
 	}
 	public String toString(){
-		return this.color+"\t"+this.height+"\t"+this.width;
+		return "\tRectangle toString(), Color: "+getColor()+"\tHeight: "+this.height+"\tWidth: "+this.width;
 	}
 	
 	

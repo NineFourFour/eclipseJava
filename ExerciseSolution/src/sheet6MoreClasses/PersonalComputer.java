@@ -1,7 +1,8 @@
-package sheet5Classes;
+package sheet6MoreClasses;
+
+
 
 public class PersonalComputer {
-	
 	private static int number;
 	private int ram;
 	private int hardDrive;
@@ -27,30 +28,6 @@ public class PersonalComputer {
 	public static final String OS_Mac = "4.7 Mac OS X 10.5 Leopard";
 	public static final String OS_Ubuntu = "Ubuntu 16.04.2 LTS";
 	
-	/*	POSSIBLE EXAM QUESTION
-	 * 
-	 * static initialization block, can be use to initialize the variables
-	 *  static variables belong to the class not the object, they exist before the member variables
-	 *  
-	 *  A class is the template for an object so must exist before the object is created
-	 *  
-	 *  A final variable must be initialized, i.e. it must be given a value on the same line or in
-	 *  a static block.
-	 *  it can't be given a value in a constructor. 
-	 *  
-	 *  A static block will execute before anything else in the class.
-	 *  
-	 *  switch block will not work if the constants are initialized in a static block, 
-	 *  wants them to be initialized on the same line.
-	 *    
-	 *  static{
-	 *  	OS_Microsoft = "Windows 10";
-	 *		OS_Mac = "4.7 Mac OS X 10.5 Leopard";
-	 *		OS_Ubuntu = "Ubuntu 16.04.2 LTS";
-	 *  }
-	 *  
-	 */
-	/*is this the default constructor or a zero parameter constructor, with default values*/
 	public PersonalComputer(){
 		this.pcNumber = number++;
 		this.ram = RAM_4_GB;
@@ -125,23 +102,23 @@ public class PersonalComputer {
 	}
 	/**/
 	public void getCostOne(){
-		double calCost = this.ram*this.hardDrive*this.monitorSize / 140;
+		double calCost = this.ram*this.hardDrive*this.monitorSize / 70;
 		switch(this.OS){
 			case "Windows 10": calCost = calCost/2;
 								//System.out.printf("\nSwitch calCost : %.2f\n",calCost);
 				break;
-			case "4.7 Mac OS X 10.5 Leopard": calCost += 500;
+			case "4.7 Mac OS X 10.5 Leopard": calCost += 5;
 										//	System.out.printf("\nSwitch calCost : %.2f\n",calCost);
 				break;
-			case "Ubuntu 16.04.2 LTS": calCost = calCost/4;
+			case "Ubuntu 16.04.2 LTS": calCost = calCost/3;
 										//System.out.printf("\nSwitch calCost : %.2f\n",calCost);
 				break;
 			default:
 				calCost += 100;
 				break;
 		}
-		cost = calCost;
-		System.out.printf("\n\t\tCost of PC%d with Ram: %dGB, Hard Drive: %dGB, OS: %s, Monitor Size: %dinch is %.2f \n\n",this.pcNumber, this.ram, this.hardDrive, this.OS, this.monitorSize, calCost);
+		this.cost = calCost;
+		
 	}
 	public void calculateCost(int ram, int hardDrive, int monitorSize){
 		double cost = ram*hardDrive*monitorSize / 140;
@@ -159,7 +136,8 @@ public class PersonalComputer {
 				cost += 100;
 				break;
 		}
-		System.out.printf("\n\t\tCost of PC with Ram %dGB, Hard Drive %dGB, %s, Monitor Size %dinch is %.2f \n\n",ram, hardDrive,this.OS, monitorSize, cost);
+		this.cost = cost;
+		//System.out.printf("\n\tCost of PC with Ram %dGB, Hard Drive %dGB, %s, Monitor Size %dinch is %.2f \n\n",ram, hardDrive,this.OS, monitorSize, cost);
 	}
 	public String toString(){
 		return String.format("\n\t\tPC No: %d\n\t\tRam: %s\n\t\tHard Drive: %s\n\t\tOS: %s\n\t\tMonitor Size: %s\n\t\tCost: €%.2f",this.pcNumber,this.ram,this.hardDrive,this.OS, this.monitorSize, this.cost);

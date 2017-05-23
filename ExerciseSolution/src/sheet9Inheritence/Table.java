@@ -1,8 +1,8 @@
 package sheet9Inheritence;
 
 public class Table extends Furniture{
-	boolean isExpandable;
-	String shape;
+	private boolean isExpandable;
+	private String shape;
 	
 	public Table(){
 		super();
@@ -27,7 +27,7 @@ public class Table extends Furniture{
 	}
 	
 	public String toString(){
-		return this.colour+"\t\t"+this.materialType+"\t\t"+this.isExpandable+"\t\t"+this.shape;
+		return "\tColour: "+getColour()+"\t\tMaterial type: "+getMaterialType()+"\t\tExpandable: "+(this.isExpandable? "Yes" : "No")+"\t\tShape: "+this.shape;
 	}	
 	
 }
