@@ -31,18 +31,6 @@ public class Ex3Sales {
 		Sales[4][2] = 000;
 		Sales[4][3] = 500;
 		printTotalSales(Sales);
-		int[] col = new int[4];
-		for(int i = 0; i<Sales.length; i++ ){
-		
-			for(int j=0; j< Sales[0].length; j++){
-			
-			
-				System.out.println(Sales[j][i]);
-				
-				
-			}
-		
-		}
 		
 	}
 	public static void printTotalSales(int[][] Sales){
@@ -51,7 +39,6 @@ public class Ex3Sales {
 		System.out.println("\t\t\t\t\t\t\t|Product Totals");
 		System.out.print("\t---------------------------------------------------------------\n");
 		//print out the two-d array
-		int colTotal =0;
 		int[] col = new int[4];
 		for(int i = 0; i<Sales.length; i++ ){
 			System.out.printf("\tProduct: %d",i+1);
@@ -60,17 +47,14 @@ public class Ex3Sales {
 				System.out.printf("\t%d",Sales[i][j]);
 				//total sales per product
 				total+=Sales[i][j];
-				//System.out.println("\n\n-----------------"+i+j);
-				//colTotal += Sales[j][i];
+				col[j]+= Sales[i][j];
 				
 			}
-			//col[i] = colTotal;
-			colTotal = 0;
 			System.out.printf("\t|%d\n",total);	
 		}
 		System.out.print("\t-------------------------------------------------\n");
 		System.out.print("\tTotals\t");
-		int total = 0;
+		/*int total = 0;
 		//total sales per sales person, col stays the same row changes
 		for(int j=0; j<Sales[0].length; j++){
 			for(int i = 0; i<Sales.length; i++ ){
@@ -78,11 +62,10 @@ public class Ex3Sales {
 			}
 			System.out.printf("\t%d",total);
 			total = 0;
-		}
-		System.out.print("\n\n");
-		for(int k = 0; k< col.length; k++){
-			System.out.println(col[k]);
-		}
+		}*/
+		for(int i = 0; i<col.length; i++)
+			System.out.print("\t"+col[i]);
+	
 	}
 	
 }
