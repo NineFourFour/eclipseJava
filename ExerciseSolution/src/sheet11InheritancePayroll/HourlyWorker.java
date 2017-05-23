@@ -1,8 +1,8 @@
 package sheet11InheritancePayroll;
 
 public class HourlyWorker extends Employee {
-	double wage;
-	double hoursWorked;
+	private double wage;
+	private double hoursWorked;
 	
 	public HourlyWorker(){
 		super();

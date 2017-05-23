@@ -1,8 +1,8 @@
 package sheet11InheritancePayroll;
 
 public abstract class Employee {
-	String firstName;
-	String lastName;
+	private String firstName;
+	private String lastName;
 	
 	public Employee(){
 		super();

@@ -2,8 +2,8 @@ package sheet11InheritancePayroll;
 
 public class PieceWorker extends Employee {
 
-	double wagePerPiece;
-	int quantity;
+	private double wagePerPiece;
+	private int quantity;
 	
 	public PieceWorker(){
 		super();

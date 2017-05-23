@@ -36,7 +36,7 @@ public class CommissionWorker extends Employee{
 		return getSalary() + this.salary *(this.commission/100);
 	}
 	public String toString(){
-		return "Commission Worker\nName: "+this.firstName+" "+this.lastName+"\n"+"Earnings: €"+getEarnings()+"\nSales volume:"+getQuantity();
+		return "Commission Worker\nName: "+getFirstName()+" "+getLastName()+"\n"+"Earnings: €"+getEarnings()+"\nSales volume:"+getQuantity();
 	}
 
 }

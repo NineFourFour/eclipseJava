@@ -2,7 +2,7 @@ package sheet11InheritancePayroll;
 
 public class Boss extends Employee{
 	
-	double salary;
+	private double salary;
 	
 	public Boss(){
 		super();
@@ -21,6 +21,6 @@ public class Boss extends Employee{
 		return this.salary;
 	}
 	public String toString(){
-		return "Title : Boss\nName: "+this.firstName+" "+this.lastName+"\nSalary: "+this.salary;
+		return "Title : Boss\nName: "+getFirstName()+" "+getLastName()+"\nSalary: "+this.salary;
 	}
 }

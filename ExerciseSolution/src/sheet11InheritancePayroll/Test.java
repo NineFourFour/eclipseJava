@@ -19,10 +19,9 @@ public class Test {
 		
 		Employee[] employeeArray = {newBoss,comWorker,newPieceWorker,newHourlyWorker};
 		
-		for(int i =0; i<employeeArray.length; i++){
-			String s = employeeArray[i].toString();
-			System.out.print(s+"\n\n");
-			double d = employeeArray[i].getEarnings();
+		for(Employee e:employeeArray){
+			System.out.print(e+"\n\n");
+			double d = e.getEarnings();
 			System.out.print("getEarnings: "+d+"\n\n");
 		}
 	}
