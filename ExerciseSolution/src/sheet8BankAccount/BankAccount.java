@@ -8,16 +8,16 @@ public class BankAccount {
 	private int accountNumber;
 	private double balance;
 	
-	static double interestRate = 7;
-	static int numberOfAccounts = 0;
-	static int accountNum = 40005100;
+	private static final double interestRate = 7;
+	public static int numberOfAccounts = 0;
+	public static int accountNum = 40005100;
 	
 /*
  *  default constructor has the same access modifier as the class has no-arguments constructor
  *
  * */
 	/*no-args constructor, accountNum and numberOfAccounts are incremented every time an object is created*/
-	public BankAccount(){	
+	private BankAccount(){	
 		accountNum++;
 		numberOfAccounts++;
 	}
@@ -25,22 +25,23 @@ public class BankAccount {
 		this();
 		this.balance = despoit;
 	}
+	public BankAccount(String name, String address){
+		this();
+		this.accountNumber = accountNum;
+		this.balance = 0;
+		this.name = name;
+		this.address = address;
+	}
 	public BankAccount(String name, String address, double balance){
-		accountNum++;
-		numberOfAccounts++;
+		this();
 		this.accountNumber = accountNum;
 		this.balance = balance;
 		this.name = name;
 		this.address = address;
 	}
-	public void setAccountNumber(int accountNumber){
-		this.accountNumber = accountNumber;
-	}
+	
 	public int getAccountNumber(){
 		return this.accountNumber;
-	}
-	public void setBalance(double balance){
-		this.balance = balance;
 	}
 	public double getBalance(){
 		return this.balance;
@@ -58,11 +59,18 @@ public class BankAccount {
 		return this.address;
 	}
 	
-	public void depositMoney(double deposit){
-		this.balance += deposit;
+	public double depositMoney(double deposit){
+		if(deposit < 0)
+			System.out.println("Invalid amount");
+		else
+			this.balance += deposit;
+		return this.balance;
 	}
 	public void withdrawMoney(double withdraw){
-		this.balance = this.balance - withdraw;
+		if(withdraw > this.balance)
+			System.out.println("Insurfficient  funds");
+		else
+			this.balance-= withdraw;
 	}
 	
 	public void addInterest(){

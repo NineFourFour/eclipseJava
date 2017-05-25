@@ -59,8 +59,7 @@ public class Clock {
 			seconds = Integer.toString(this.seconds);
 		System.out.printf("\n\t%s:%s:%s",hours, minutes, seconds);*/
 		
-		String s = "\n\tString s = "+(this.hours < 10 ? "0"+this.hours : ""+this.hours)+":"+(this.minutes < 10 ? "0"+this.minutes : ""+this.minutes)+":"+(this.seconds < 10 ? "0"+this.seconds : ""+this.seconds);
-		System.out.println(s);
+		System.out.println("\t"+(this.hours < 10 ? "0"+this.hours : ""+this.hours)+":"+(this.minutes < 10 ? "0"+this.minutes : ""+this.minutes)+":"+(this.seconds < 10 ? "0"+this.seconds : ""+this.seconds));
 	}
 	
 	public void incrementHours(int hours){
@@ -106,7 +105,7 @@ public class Clock {
 		}		
 	}
 	public String toString(){
-		return "\tClock C"+Clock.number+" "+this.hours+":"+this.minutes+":"+this.seconds;
+		return "\t"+(this.hours < 10 ? "0"+this.hours : ""+this.hours)+":"+(this.minutes < 10 ? "0"+this.minutes : ""+this.minutes)+":"+(this.seconds < 10 ? "0"+this.seconds : ""+this.seconds);
 	}
 	
 	

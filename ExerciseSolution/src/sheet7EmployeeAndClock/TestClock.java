@@ -18,6 +18,7 @@ public class TestClock {
 		System.out.print("\n\n\tincrement time by 6063 seconds");
 		c1.incrementSeconds(6063);
 		c1.getTime();
+		System.out.println(c1);
 		
 		Clock c2 = new Clock();
 		System.out.printf("\n\n\tNew Clock C%d",Clock.number);
