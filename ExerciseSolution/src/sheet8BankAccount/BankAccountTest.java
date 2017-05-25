@@ -5,15 +5,15 @@ public class BankAccountTest {
 	
 	public static void main(String[] args) {
 
-		BankAccount one = new BankAccount();
+		BankAccount one = new BankAccount(200);
 		System.out.printf("\n\tBankAccount : %s", one);
 		System.out.printf("\n\tBankAccount number : %d", BankAccount.numberOfAccounts);//access static variable outside class
 		System.out.printf("\n\tBankAccountOne number : %d", BankAccount.accountNum);
-		one.setAccountNumber(BankAccount.accountNum);
+	
 		
 		BankAccount two = new BankAccount(12345.90);
 		System.out.printf("\n\n\tSecond Bank A\\C : %s",two);
-		two.setAccountNumber(BankAccount.accountNum);
+	
 		System.out.printf("\n\tBankAccount number : %d", BankAccount.numberOfAccounts);
 		System.out.printf("\n\tAccount balance: %.2f", two.getBalance());
 		two.addInterest();
@@ -26,11 +26,11 @@ public class BankAccountTest {
 		System.out.printf("\n\tBankAccountTwo number : %d", two.getAccountNumber());
 		System.out.printf("\n\n");
 		
-		BankAccount three = new BankAccount();
+		BankAccount three = new BankAccount(300);
 		System.out.printf("\n\tBankAccount number : %d", BankAccount.numberOfAccounts);
-		three.setAccountNumber(BankAccount.accountNum);
+	
 		three.setName("James");
-		three.setBalance(5678);
+	
 		System.out.printf("\n\tBankAccountThree number : %d", three.getAccountNumber());
 		System.out.printf("\n\tBankAccountThree : %s", three);
 		
