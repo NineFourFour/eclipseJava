@@ -5,10 +5,13 @@ public class Table extends Furniture{
 	private String shape;
 	
 	public Table(){
-		super();
+		/*no need for super(); as it is implied*/
 	}
-	public Table(String colour, String materialType,boolean isExpandable, String shape){
-		super(colour,materialType);
+	public Table(boolean isExpandable, String shape){
+		/*no need to pass color and material type through as 
+		 * they are inherited from the super class which in this case
+		 * is the furniture class, we also don't need the following
+		 * super(colour,materialType);*/
 		this.isExpandable = isExpandable;
 		this.shape = shape;
 	}
@@ -27,7 +30,7 @@ public class Table extends Furniture{
 	}
 	
 	public String toString(){
-		return "\tColour: "+getColour()+"\t\tMaterial type: "+getMaterialType()+"\t\tExpandable: "+(this.isExpandable? "Yes" : "No")+"\t\tShape: "+this.shape;
+		return super.toString()+" -- Expandable: "+(this.isExpandable? "Yes" : "No")+" -- Shape: "+this.shape;
 	}	
 	
 }

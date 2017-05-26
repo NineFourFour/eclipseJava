@@ -28,7 +28,7 @@ public class Furniture {
 	}
 	/*return class variables in a string*/
 	public String toString(){
-		return " "+this.colour+" "+this.materialType;
+		return "Colour: "+this.colour+" -- Material Type: "+this.materialType;
 	}
 	
 }

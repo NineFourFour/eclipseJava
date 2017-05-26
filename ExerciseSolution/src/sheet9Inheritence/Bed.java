@@ -6,11 +6,13 @@ public class Bed extends Furniture {
 	private String size;
 	
 	public Bed (){
-		/*inherit the furniture class*/
-		super();
+		/*inherit the furniture class, implicit so no need for super()*/
+		//super();
 	}
-	public Bed(String colour, String materialType, boolean hasHeadboard, String size){
-		super(colour, materialType);
+	public Bed(boolean hasHeadboard, String size){
+		/*same reason as above ,  super(colour, materialType);
+		 * also no need to pass through as parameters.
+		 * */
 		this.hasHeadboard = hasHeadboard;
 		this.size = size;
 	}
@@ -27,7 +29,7 @@ public class Bed extends Furniture {
 		return this.size;
 	}
 	public String toString(){
-		return "Colour: "+getColour()+"\tMaterial type: "+getMaterialType()+"\t\tHeadboard: "+(this.hasHeadboard?"Yes":"No")+"\t\tSize: "+this.size;
+		return super.toString()+" -- Headboard: "+(this.hasHeadboard?"Yes":"No")+" -- Size: "+this.size;
 	}
 
 }

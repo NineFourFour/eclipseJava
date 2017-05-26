@@ -7,26 +7,26 @@ public class BankAccountTest {
 
 		BankAccount one = new BankAccount(200);
 		System.out.printf("\n\tBankAccount : %s", one);
-		System.out.printf("\n\tBankAccount number : %d", BankAccount.numberOfAccounts);//access static variable outside class
+		System.out.printf("\n\tNumber of BankAccounts : %d", BankAccount.numberOfAccounts);//access static variable outside class
 		System.out.printf("\n\tBankAccountOne number : %d", BankAccount.accountNum);
-	
+		System.out.printf("\n\tBankAccountOne number : %d", one.getAccountNumber());
 		
 		BankAccount two = new BankAccount(12345.90);
-		System.out.printf("\n\n\tSecond Bank A\\C : %s",two);
+		//System.out.printf("\n\n\tSecond Bank A\\C : %s",two);
 	
 		System.out.printf("\n\tBankAccount number : %d", BankAccount.numberOfAccounts);
-		System.out.printf("\n\tAccount balance: %.2f", two.getBalance());
-		two.addInterest();
-		System.out.printf("\n\tNew balance: %.2f", two.getBalance());
-		two.depositMoney(234);
-		System.out.printf("\n\tAdd 234, new balance: %.2f", two.getBalance());
-		two.withdrawMoney(34);
-		System.out.printf("\n\tAdd 34, new balance: %.2f", two.getBalance());
-		System.out.printf("\n\tBankAccountOne number : %d", one.getAccountNumber());
+		//System.out.printf("\n\tAccount balance: %.2f", two.getBalance());
+		//two.addInterest();
+		//System.out.printf("\n\tNew balance: %.2f", two.getBalance());
+		//two.depositMoney(234);
+		//System.out.printf("\n\tAdd 234, new balance: %.2f", two.getBalance());
+		//two.withdrawMoney(34);
+		//System.out.printf("\n\tAdd 34, new balance: %.2f", two.getBalance());
+		
 		System.out.printf("\n\tBankAccountTwo number : %d", two.getAccountNumber());
 		System.out.printf("\n\n");
 		
-		BankAccount three = new BankAccount(300);
+		/*BankAccount three = new BankAccount(300);
 		System.out.printf("\n\tBankAccount number : %d", BankAccount.numberOfAccounts);
 	
 		three.setName("James");
@@ -67,7 +67,7 @@ public class BankAccountTest {
 		System.out.printf("\n\tBankAccountFour: WithdrawMoney 1234: New balance: %.2f", five.getBalance());
 		withdrawAll  = five.withdrawAll();
 		System.out.printf("\n\tBankAccountFour	 WithdrawAll: %.2f, New balance: %.2f", withdrawAll, five.getBalance());
-		System.out.printf("\nFive toString : %s\n", five);
+		System.out.printf("\nFive toString : %s\n", five);*/
 	
 	}
 }

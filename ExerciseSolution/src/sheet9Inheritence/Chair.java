@@ -6,10 +6,15 @@ public class Chair extends Furniture{
 	private String type;
 	
 	public Chair(){
-		super();
+		/* No need for super();
+		 * as it is implied
+		 * */
 	}
-	public Chair(String colour, String materialType, boolean hasGasLift, String type){
-		super(colour, materialType);
+	public Chair(boolean hasGasLift, String type){
+		/*
+		 * no need for super(colour, materialType);
+		 * also no need to pass through as parameters as it is implied
+		 * */
 		this.hasGasLift = hasGasLift;
 		this.type = type;
 	}
@@ -28,7 +33,7 @@ public class Chair extends Furniture{
 	}
 	
 	public String toString(){
-		return "Chair color: "+getColour()+"\tMaterialType: "+getMaterialType()+"\t\tHas Gas Lift: "+(this.hasGasLift?"Yes":"No")+"\tType of use: "+this.type;
+		return super.toString()+" -- Has Gas Lift: "+(this.hasGasLift?"Yes":"No")+" -- Type of use: "+this.type;
 	}	
 	
 }

@@ -18,7 +18,7 @@ public class BankAccount {
  * */
 	/*no-args constructor, accountNum and numberOfAccounts are incremented every time an object is created*/
 	private BankAccount(){	
-		accountNum++;
+		this.accountNumber = accountNum++;
 		numberOfAccounts++;
 	}
 	public BankAccount(double despoit){
@@ -26,21 +26,20 @@ public class BankAccount {
 		this.balance = despoit;
 	}
 	public BankAccount(String name, String address){
-		this();
-		this.accountNumber = accountNum;
+		this(); 
 		this.balance = 0;
 		this.name = name;
 		this.address = address;
 	}
 	public BankAccount(String name, String address, double balance){
 		this();
-		this.accountNumber = accountNum;
 		this.balance = balance;
 		this.name = name;
 		this.address = address;
 	}
 	
 	public int getAccountNumber(){
+
 		return this.accountNumber;
 	}
 	public double getBalance(){
