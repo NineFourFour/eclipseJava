@@ -51,7 +51,7 @@ public class ShapeTester {
 				 * and print out the radius and color*/
 				Circle CircleOne = (Circle)shapeArrayOne[i];
 				System.out.println(CircleOne);
-				System.out.printf("\n\tRadius of the circle is %d", CircleOne.getRadius());
+				System.out.printf("\n\tRadius of the circle is %d", ((Circle)shapeArrayOne[i]).getRadius());
 				System.out.printf("\n\tColor of the Circle is: %s\n", CircleOne.getColor());
 				CircleOne.draw();
 			}

@@ -1,5 +1,7 @@
 package sheet11InheritancePayroll;
 
+import sheet10Inheritance_enum.Circle;
+
 public class Test {
 	public static void main(String[] args) {
 		
@@ -23,6 +25,13 @@ public class Test {
 			System.out.print(e+"\n\n");
 			double d = e.getEarnings();
 			System.out.print("getEarnings: "+d+"\n\n");
+			/*if(shapeArrayOne[i] instanceof Circle){
+				System.out.printf("\n\tCircle\n");
+				/*if a Circle then, cast shape object to circle object
+				 * and print out the radius and color
+				Circle CircleOne = (Circle)shapeArrayOne[i];
+				System.out.println(CircleOne);
+				System.out.printf("\n\tRadius of the circle is %d", ((Circle)shapeArrayOne[i]).getRadius());*/
 		}
 	}
 }

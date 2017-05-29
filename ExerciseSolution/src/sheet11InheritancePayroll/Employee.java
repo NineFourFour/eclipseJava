@@ -1,11 +1,14 @@
 package sheet11InheritancePayroll;
 
+import java.time.LocalDate;
+
 public abstract class Employee {
 	private String firstName;
 	private String lastName;
+	LocalDate dateOfBirth = LocalDate.of(1990, 11, 5);
 	
 	public Employee(){
-		super();
+		
 	}
 	public Employee(String firstName, String lastName){
 		this.firstName = firstName;
