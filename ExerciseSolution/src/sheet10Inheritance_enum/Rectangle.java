@@ -3,7 +3,7 @@ package sheet10Inheritance_enum;
 public class Rectangle extends Shape {
 	private double height;
 	private double width;
-	Color code;
+	
 	
 	public Rectangle(){
 		super();

@@ -4,7 +4,7 @@ import sheet10Inheritance_enum.Shape.Color;
 
 public class ShapeTester {
 	public static void main(String[] args) {
-		/*Shape[] shapeElements = new Shape[4];
+		Shape[] shapeElements = new Shape[4];
 		
 		shapeElements[0] = new Shape();
 		shapeElements[1] = new Rectangle();
@@ -13,13 +13,15 @@ public class ShapeTester {
 		System.out.println("\n\tshapeElements Array");
 		for(int i=0; i<shapeElements.length; i++){
 			System.out.printf("\n\tColor of shape is: %s", shapeElements[i].getColor());
-		}*/
+			shapeElements[i].draw();
+		}
+		
 		/*declare a new object of type shape*/
 		Shape shape =new Shape();
 		//shape.code = Shape.Color.BLACK;
 		//shape.setColor(shape.code);
-		System.out.println("New Shape color default: "+shape);
-		//Shape shape1 = new Shape();
+		System.out.println("\n\nNew Shape color default: "+shape);
+		Shape shape1 = new Shape();
 		//shape1.code = Shape.Color.BLACK;
 		/*declare a new object of type rectangle which is a subclass of type shape 
 		 *with the color blue
@@ -31,7 +33,7 @@ public class ShapeTester {
 		//shape2.code = Shape.Color.GREEN;
 		
 		/*new circle object color green and 0 radius*/
-		Circle circleOne = new Circle(Color.ORANGW, 0);
+		Circle circleOne = new Circle(Color.ORANGE, 0);
 		/*set the radius to 20*/
 		circleOne.setRadius(20);
 		
@@ -73,5 +75,6 @@ public class ShapeTester {
 				System.out.printf("\n\tColor of the Triangle is %s\n", TriangleOne.getColor());
 			}
 		}
+		System.out.println("\nNumberOf shapes: "+Shape.counter);
 	}
 }

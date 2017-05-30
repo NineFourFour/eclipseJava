@@ -5,7 +5,7 @@ public class Circle extends Shape{
 	private int radius;
 	
 	public Circle(){
-		super();
+		
 	}
 	public Circle(Color code, int radius){
 		super(code);

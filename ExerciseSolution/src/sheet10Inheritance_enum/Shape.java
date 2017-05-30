@@ -2,18 +2,20 @@ package sheet10Inheritance_enum;
 
 public class Shape {
 	/* enum: makeup a data type, color*/
-	public enum Color{RED, GREEN, BLUE, YELLOW, BLACK, PINK, ORANGW, WHITE, GREY}
-	
+	public enum Color{RED, GREEN, BLUE, YELLOW, BLACK, PINK, ORANGE, WHITE, GREY}
+	static int counter;
 	Color code;
 	private String color;
 	
 	public Shape(){
 		/*set default color*/
+		counter++;
 		this.color = Color.BLACK.toString();
 	}
 	public Shape(Color code){
 		/*using one of the methods in the Enum type 
 		 * to covert toString*/
+		this();
 		this.color = code.toString();
 	}
 	public void setColor(String color){
