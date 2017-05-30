@@ -52,11 +52,11 @@ public class testTwo {
 		
 	}
 	public static void main(String[] args) {
-		String date = "2015.04.12 ";
+		String date = "2012-04-23 ";
 		date = date.trim();
 		LocalDate dateOfBirth= LocalDate.parse(date);;
-
-		String[] sbDateArray = date.split("\\.");
+		System.out.println(dateOfBirth);
+		/*String[] sbDateArray = date.split("\\.");
 		int[] intDate = new int[sbDateArray.length];
 		for(int i=0; i<sbDateArray.length; i++){
 			
@@ -65,6 +65,6 @@ public class testTwo {
 			
 			System.out.println(j);
 		
-		}
+		}*/
 	}
 }

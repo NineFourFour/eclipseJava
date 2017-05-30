@@ -7,8 +7,8 @@ public class Boss extends Employee{
 	public Boss(){
 		super();
 	}
-	public Boss(String firstName, String lastName, double salary){
-		super(firstName, lastName);
+	public Boss(String firstName, String lastName,String dateOfBirth, double salary){
+		super(firstName, lastName, dateOfBirth);
 		this.salary = salary;
 	}
 	public void setSalary(double salary){
@@ -21,6 +21,6 @@ public class Boss extends Employee{
 		return this.salary;
 	}
 	public String toString(){
-		return "Title : Boss\nName: "+getFirstName()+" "+getLastName()+"\nSalary: "+this.salary;
+		return "Title : Boss\n"+super.toString()+"\nSalary: "+this.salary;
 	}
 }

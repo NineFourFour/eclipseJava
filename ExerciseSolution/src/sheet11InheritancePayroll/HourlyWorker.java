@@ -7,8 +7,8 @@ public class HourlyWorker extends Employee {
 	public HourlyWorker(){
 		super();
 	}
-	public HourlyWorker(String firstName, String lastName, double wage, double hoursWorked){
-		super(firstName, lastName);
+	public HourlyWorker(String firstName, String lastName, String dateOfBirth, double wage, double hoursWorked){
+		super(firstName, lastName, dateOfBirth);
 		this.wage = wage;
 		this.hoursWorked = hoursWorked;
 	}
@@ -28,6 +28,6 @@ public class HourlyWorker extends Employee {
 		return getWage()*getHoursWorked();
 	}
 	public String toString(){
-		return "Hourly Worker\nName: "+getFirstName()+" "+getLastName()+"\nEarnings: "+getEarnings();
+		return "Hourly Worker\n"+super.toString()+"\nEarnings: "+getEarnings();
 	}
 }

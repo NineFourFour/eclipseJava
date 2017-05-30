@@ -8,8 +8,8 @@ public class CommissionWorker extends Employee{
 	public CommissionWorker(){
 		super();
 	}
-	public CommissionWorker(String firstName, String lastName, double salary, double commission, int quanity){
-		super(firstName, lastName);
+	public CommissionWorker(String firstName, String lastName, String dateOfBirth, double salary, double commission, int quanity){
+		super(firstName, lastName, dateOfBirth);
 		this.salary = salary;
 		this.commission = commission;
 		this.quanity = quanity;
@@ -36,7 +36,7 @@ public class CommissionWorker extends Employee{
 		return getSalary() + this.salary *(this.commission/100);
 	}
 	public String toString(){
-		return "Commission Worker\nName: "+getFirstName()+" "+getLastName()+"\n"+"Earnings: €"+getEarnings()+"\nSales volume:"+getQuantity();
+		return "Commission Worker\n"+super.toString()+"\n"+"Earnings: €"+getEarnings()+"\nSales volume:"+getQuantity();
 	}
 
 }

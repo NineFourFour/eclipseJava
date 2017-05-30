@@ -5,18 +5,18 @@ import sheet10Inheritance_enum.Circle;
 public class Test {
 	public static void main(String[] args) {
 		
-		Boss newBoss = new Boss("Hannibal","Lecter", 170_000);
+		Boss newBoss = new Boss("Hannibal","Lecter","1942-04-28",170_000);
 		//String boss = newBoss.toString();
-		//System.out.print(boss+"\n\n");
+		System.out.print(newBoss+"\n\n");
 		
-		CommissionWorker comWorker = new CommissionWorker("Dexter", "Smyth", 500, 10, 80);
+		CommissionWorker comWorker = new CommissionWorker("Dexter", "Smyth","1970-11-05", 500, 10, 80);
 		//String worker = comWorker.toString();
 		//System.out.print(worker+"\n\n");
 		
-		PieceWorker newPieceWorker = new PieceWorker("Flecter","Norman",20, 60);
+		PieceWorker newPieceWorker = new PieceWorker("Flecter","Norman","1970-11-05",20, 60);
 		//System.out.print(newPieceWorker+"\n\n");
 		
-		HourlyWorker newHourlyWorker = new HourlyWorker("Captain", "Jack", 15, 40);
+		HourlyWorker newHourlyWorker = new HourlyWorker("Captain", "Jack","1970-11-05", 15, 40);
 		//System.out.print(newHourlyWorker+"\n\n");
 		
 		Employee[] employeeArray = {newBoss,comWorker,newPieceWorker,newHourlyWorker};

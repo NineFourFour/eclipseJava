@@ -8,8 +8,8 @@ public class PieceWorker extends Employee {
 	public PieceWorker(){
 		super();
 	}
-	public PieceWorker(String firstName, String lastName, double wagePerPiece, int quantity){
-		super(firstName, lastName);
+	public PieceWorker(String firstName, String lastName, String dateOfBirth, double wagePerPiece, int quantity){
+		super(firstName, lastName, dateOfBirth);
 		this.wagePerPiece = wagePerPiece;
 		this.quantity = quantity;
 	}
@@ -29,6 +29,6 @@ public class PieceWorker extends Employee {
 		return getWagePerPiece()*getQuantity();
 	}
 	public String toString(){
-		return "Piece Worker\nName: "+getFirstName()+" "+getLastName()+"\nEarnings: "+getEarnings();
+		return "Piece Worker\n"+super.toString()+"\nEarnings: "+getEarnings();
 	}
 }
