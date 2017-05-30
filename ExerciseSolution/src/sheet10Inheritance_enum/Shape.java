@@ -1,5 +1,7 @@
 package sheet10Inheritance_enum;
-
+/*
+ * Shape is a superclass for rectangle, Circle and Triangle
+ * */
 public class Shape {
 	/* enum: makeup a data type, color*/
 	public enum Color{RED, GREEN, BLUE, YELLOW, BLACK, PINK, ORANGE, WHITE, GREY}
