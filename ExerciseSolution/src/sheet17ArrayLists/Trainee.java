@@ -43,6 +43,6 @@ public class Trainee {
 	}
 	
 	public String toString(){
-		return "Name: "+this.name+" Address: "+this.address+" Birthday: "+this.birthday;
+		return "\nName: "+this.name+", Address: "+this.address+", Birthday: "+this.birthday;
 	}
 }
