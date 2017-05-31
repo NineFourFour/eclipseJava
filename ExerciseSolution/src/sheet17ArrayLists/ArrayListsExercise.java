@@ -15,7 +15,7 @@ public class ArrayListsExercise {
 		Scanner input = new Scanner(System.in);
 		ArrayList<String> newArrayList = new ArrayList<>();
 		newArrayList.add("NineFour");
-		String[] nineFour = {"Hannibal","Dexter","Flechter","Seven"};
+		String[] nineFour = {"Hannibal","Dexter","Flechter","Seven","Mr T","Face","StarLord","CountOne","James T"};
 		newArrayList.addAll(Arrays.asList(nineFour));
 		System.out.println("\na)"+newArrayList);
 	//b)
@@ -56,18 +56,48 @@ public class ArrayListsExercise {
 		Collections.sort(newArrayList);
 		System.out.println("\nf) "+newArrayList);
 	//g)
+		System.out.println("\nRemove NineFour at position 7");
+		String inputString = newArrayList.get(7);
+		boolean removed = newArrayList.remove(inputString);
 		
+		if(removed)
+			System.out.println("g) "+newArrayList);
 		
+	//h)
+		newArrayList.add(0,"Sanata");
+		System.out.println("h) "+newArrayList);
 		
+	//i)
+		if(newArrayList.isEmpty())
+			System.out.println("i) Array list is empty");
+		else
+			System.out.println("i) Not empty");
+		newArrayList.clear();
+		if(newArrayList.isEmpty())
+			System.out.println("i) Array list is empty");
+		else
+			System.out.println("i) Not empty");
 		
-		
-		
-		
-		
-		
-		
-		
-		
+		boolean x = true;
+		String name = null;//
+		String other = "";
+		/*name is not equal to null so false -- 
+		 * !name.equal(other)
+		 * name not equal to other == false, not of false is true so x = false
+		 * */
+		if ((name == null) ? (name != null) : !name.equals(other)) {
+		        x =false;
+		}
+		/*
+		 * String name = null;//
+		 * String other = "";
+		 * name = null is true then 
+		 * (name != null) false
+		 * output
+		 * name: null
+		 * x: true*/
+		System.out.println("name: "+name);
+		System.out.println("x: "+x);
 		
 		
 		
