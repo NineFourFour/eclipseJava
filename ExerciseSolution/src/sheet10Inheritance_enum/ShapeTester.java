@@ -21,7 +21,7 @@ public class ShapeTester {
 		//shape.code = Shape.Color.BLACK;
 		//shape.setColor(shape.code);
 		System.out.println("\n\nNew Shape color default: "+shape);
-		Shape shape1 = new Shape();
+		//Shape shape1 = new Shape();
 		//shape1.code = Shape.Color.BLACK;
 		/*declare a new object of type rectangle which is a subclass of type shape 
 		 *with the color blue

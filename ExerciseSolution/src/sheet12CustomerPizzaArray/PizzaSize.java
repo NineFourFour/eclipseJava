@@ -9,8 +9,8 @@ public enum PizzaSize {
 	SIZE_15(15,12,1.6);
 	
 	int diameter;
-	int price;
-	double pricePerTopping;
+	private int price;
+	private double pricePerTopping;
 	
 	PizzaSize(int diameter, int price, double pricePerTopping){
 		this.diameter = diameter;
@@ -26,5 +26,6 @@ public enum PizzaSize {
 	public double getPricePerTopping(){
 		return this.pricePerTopping;
 	}
+
 
 }

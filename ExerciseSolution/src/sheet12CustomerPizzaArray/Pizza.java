@@ -1,12 +1,12 @@
 package sheet12CustomerPizzaArray;
 
 public class Pizza {
-	String[] toppings;
-	PizzaSize pizzaSize;
-	double price;
+	private String[] toppings;
+	private PizzaSize pizzaSize;
+	//private double price;
 	
 	public Pizza(){
-		super();
+
 	}
 	public Pizza(String[] toppings, PizzaSize pizzaSize){
 		this.toppings = toppings;
@@ -18,8 +18,8 @@ public class Pizza {
 	public String[] getToppings(){
 		return this.toppings;
 	}
-	public void setDiameter(int pizzaSize){
-		this.pizzaSize.diameter = pizzaSize;
+	public void setDiameter(int diameter){
+		this.pizzaSize.diameter = diameter;
 	}
 	public int getDiameter(){
 		return this.pizzaSize.getDiameter();
@@ -39,7 +39,7 @@ public class Pizza {
 		for(String s: this.toppings){
 			toppings += s+" ";
 		}
-		return "Size: "+getDiameter()+" inch Base Price: €"+this.pizzaSize.price+" Price per Topping: €"+this.pizzaSize.pricePerTopping+"\n"+toppings+"\n\n";
+		return "Size: "+this.pizzaSize.getDiameter()+" inch Base Price: €"+this.pizzaSize.getPrice()+" Price per Topping: €"+this.pizzaSize.getPricePerTopping()+"\n"+toppings+"\n\n";
 	}
 	/*public static void main(String[] args) {
 		int ps = PizzaSize.SIZE_12.diameter;
