@@ -17,6 +17,12 @@ public abstract class Employee {
 		this.lastName = lastName;
 		this.dateOfBirth = LocalDate.parse(dateOfBirth);
 	}
+	public Employee(String firstName, String lastName, LocalDate dateOfBirth){
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.dateOfBirth = dateOfBirth;
+	}
+	
 	
 	/*setters getters*/
 	public void setFirstName(String firstName){
@@ -38,6 +44,8 @@ public abstract class Employee {
 	public String getLastName(){
 		return this.lastName;
 	}
+	
+	/*abstract method has to be inside an abstract class, it contains no body and ends with a ;*/
 	public abstract double getEarnings();
 	
 	public String toString(){
