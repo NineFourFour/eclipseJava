@@ -1,10 +1,16 @@
 package sheet13OwnerWithPetArray;
 
+/*cat has a IS-a relationship with Pet class, it inherits form that class
+ *so extends from that class
+ *cat also implements the methods contained in the Mammal interface*/
+
 public class Cat extends Pet implements Mammal {
-	int numberOfLives;
+	/*member variables*/
+	private int numberOfLives;
 	
+	/*Constructors*/
 	public Cat(){
-		super();
+		//super();
 	}
 	public Cat(String name, String breed, int age, String color, Gender type){
 		super(name, breed, age, color, type);
@@ -13,6 +19,8 @@ public class Cat extends Pet implements Mammal {
 		super(name, breed, age, color, type);
 		this.numberOfLives = numberOfLives;
 	}
+	/*implementing abstract method from parent abstract class, 
+	 * also the interface*/
 	public String getTypeOfAnimal(){
 		return "The Breed is "+getBreed()+" which is a type of Cat";
 	}
@@ -22,6 +30,8 @@ public class Cat extends Pet implements Mammal {
 	public void walk(){
 		System.out.println("Cat is walking");
 	}
+	
+	/*Setters and getters*/
 	public void setNumberOfLives(int numberOfLives){
 		this.numberOfLives = numberOfLives;
 	}
@@ -31,6 +41,8 @@ public class Cat extends Pet implements Mammal {
 	public void justLostaLife(){
 		this.numberOfLives -= 1;
 	}
+	
+	/*overriding toString method from the Object class*/
 	public String toString(){
 		return "Name: "+getName()+"\nBreed: "+getBreed()+"\nAge:"+getAge()+"\nColor: "+getColor()+"\nisFemale: "+getIsFemale()+"\nNumber of lives left: "+getNumberOfLives()+"\n";
 	}

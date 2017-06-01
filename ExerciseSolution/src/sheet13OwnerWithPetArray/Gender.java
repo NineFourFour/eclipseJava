@@ -5,13 +5,11 @@ public enum Gender {
 	MALE(false),
 	FEMALE(true);
 	
-	boolean gender;
+	private boolean gender;
 	Gender(boolean gender){
 		this.gender = gender;
 	}
-	public void setGender(boolean gender){
-		this.gender = gender;
-	}
+	
 	public boolean getGender(){
 		return this.gender;
 	}

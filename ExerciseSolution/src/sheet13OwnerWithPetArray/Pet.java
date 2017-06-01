@@ -1,27 +1,34 @@
 package sheet13OwnerWithPetArray;
 
 public abstract class Pet {
+	/*member variables*/
+	private String name;
+	private String breed;
+	private int age;
+	private String color;
+	private boolean isFemale;
+	private static int numberOfPets = 0;
 	
-	String name;
-	String breed;
-	int age;
-	String color;
-	boolean isFemale;
-	
+	/*constructors*/
 	public Pet(){
-		super();
+		//super();
+		numberOfPets++;
 	}
 	public Pet(Gender type){
-		super();
-		this.isFemale = type.gender;
+		//super();
+		numberOfPets++;
+		this.isFemale = type.getGender();
 	}
 	public Pet(String name, String breed, int age, String color, Gender type){
+		numberOfPets++;
 		this.name = name;
 		this.breed = breed;
 		this.age = age;
 		this.color = color;
-		this.isFemale = type.gender;
+		this.isFemale = type.getGender();
 	}
+	
+	/*Getters and Setters*/
 	public void setName(String name){
 		this.name = name;
 	}
@@ -46,13 +53,17 @@ public abstract class Pet {
 	public String getColor(){
 		return this.color;
 	}
-	
 	public void setIsFemale(Gender type){
-		this.isFemale = type.gender;
+		this.isFemale = type.getGender();
 	}
 	public boolean getIsFemale(){
 		return this.isFemale;
 	}
+	public int getNumberOfPets(){
+		return Pet.numberOfPets;
+	}
+	
+	/*Abstract method so Abstract class*/
 	public abstract String getTypeOfAnimal();
 	
 	public String toString(){

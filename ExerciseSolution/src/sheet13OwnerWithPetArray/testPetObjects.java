@@ -9,14 +9,12 @@ public class testPetObjects {
 		ownerCat.setBreed("aCat");
 		ownerCat.setAge(5);
 		ownerCat.setColor("black");
-		ownerCat.setIsFemale(Gender.MALE);
+		ownerCat.setIsFemale(Gender.FEMALE);
 		ownerCat.setNumberOfLives(9);
-		String cat = ownerCat.toString();
-		System.out.println(cat);
-		//ownerCat.justLostaLife();
-		//cat = ownerCat.toString();
-		//System.out.println(cat);
-		System.out.println("\n");
+	
+		System.out.println(ownerCat);
+		ownerCat.justLostaLife();
+		System.out.println("Cat has lost a life\nit has "+ownerCat.getNumberOfLives()+" lives left\n");
 		
 		Snake ownerSnake = new Snake("Snaky", "aSnake", 10, "Green/Red", Gender.FEMALE);
 		String snake = ownerSnake.toString();
@@ -39,7 +37,7 @@ public class testPetObjects {
 		System.out.println(hammond);
 		
 		
-		Pet[] ownersPets = {ownerCat, ownerDog, ownerHamster, ownerSnake};
+		Pet[] ownersPets = {ownerCat, ownerDog, ownerHamster, ownerSnake, new Dog("Murdock", "GermanShepard", 2, "Black/Tan", Gender.MALE, MicroChipped.IS_MICRO_CHIPPED)};
 		Owner newOwner = new Owner("John Murphy", "49 wood lawn Road", "3531345678", ownersPets);
 		String owner = newOwner.toString();
 		System.out.println(owner);

@@ -2,13 +2,13 @@ package sheet13OwnerWithPetArray;
 
 public class Owner {
 	
-	String name;
-	String address;
-	String phoneNumber;
-	Pet[] pet;
+	private String name;
+	private String address;
+	private String phoneNumber;
+	private Pet[] pet;
 	
 	public Owner(){
-		super();
+		//super();
 	}
 	public Owner(String name, String address, String phoneNumber, Pet[] pet){
 		this.name = name;
