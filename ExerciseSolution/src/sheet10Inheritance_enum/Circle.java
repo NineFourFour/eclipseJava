@@ -1,12 +1,12 @@
 package sheet10Inheritance_enum;
 
 
-public class Circle extends Shape{
+public abstract class Circle extends Shape{
 	private int radius;
-	
 	public Circle(){
 		
 	}
+	
 	public Circle(Color code, int radius){
 		super(code);
 		this.radius = radius;
@@ -17,9 +17,9 @@ public class Circle extends Shape{
 	public int getRadius(){
 		return this.radius;
 	}
-	public void draw(){
+	/*public void draw(){
 		System.out.printf("\n\tDraw a circle with a radius of: %d\n", this.radius);
-	}
+	}*/
 	public String toString(){
 		return "\tCircle to String : "+getColor()+"\t"+this.radius;
 	}

@@ -8,7 +8,7 @@ public class ShapeTester {
 		
 		shapeElements[0] = new Shape();
 		shapeElements[1] = new Rectangle();
-		shapeElements[2] = new Circle();
+		//shapeElements[2] = new Circle();
 		shapeElements[3] = new Triangle();
 		System.out.println("\n\tshapeElements Array");
 		for(int i=0; i<shapeElements.length; i++){
@@ -33,14 +33,14 @@ public class ShapeTester {
 		//shape2.code = Shape.Color.GREEN;
 		
 		/*new circle object color green and 0 radius*/
-		Circle circleOne = new Circle(Color.ORANGE, 0);
+		//Circle circleOne = new Circle(Color.ORANGE, 0);
 		/*set the radius to 20*/
-		circleOne.setRadius(20);
+		//circleOne.setRadius(20);
 		
 		/*object of type triangle*/
 		Triangle triangleOne = new Triangle(Color.RED);
 		
-		Shape[] shapeArrayOne = {shape, rectangleOne, circleOne, triangleOne};
+		Shape[] shapeArrayOne = {shape, rectangleOne, /*circleOne,*/ triangleOne};
 		System.out.println("\n\tshapeArrayOne");
 		/*
 		 * loop through the array and find the instance of each type

@@ -36,7 +36,10 @@ public class Dog extends Pet implements Mammal{
 		return getMicroChipped();
 	}
 	public int getChipNumber(){
-		return this.chipNumber;
+		if(isMicroChipped)
+			return this.chipNumber;
+		else
+			return 0;
 	}
 	
 	/*implementing abstract method from parent abstract class, 
@@ -45,17 +48,16 @@ public class Dog extends Pet implements Mammal{
 		return "The Breed is "+getBreed()+" which is a type of Dog";
 	}
 	public void sleep(){
-		System.out.println("Dog is a sleep");
+		System.out.println("Dog is sleeping, has MammalFactor: "+MammalFactorLarge);
 	}
 	public void walk(){
-		System.out.println("Dog is walking");
+		System.out.println("Dog is walking, has MammalFactor: "+Dog.MammalFactofMedium);
 	}
 	
 	/*overriding*/
 	public String toString(){
-		return "Name: "+getName()+"\nBreed: "+getBreed()+"\nAge:"+getAge()+"\nColor: "+getColor()+""
-				+ "\nisFemale: "+getIsFemale()+"\nMicro Chipped: "+isMicroChipped()+""
-						+ "\nMicroChipNumber: "+getChipNumber()+"\n";
+		return "\nDog\n"+super.toString()+"Micro Chipped: "+isMicroChipped()+""
+						+ "\nMicroChipNumber: "+(getChipNumber() > 0? getChipNumber() : "no ID number")+"\n";
 	}
 	
 }

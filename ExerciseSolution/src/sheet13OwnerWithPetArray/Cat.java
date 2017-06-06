@@ -25,10 +25,10 @@ public class Cat extends Pet implements Mammal {
 		return "The Breed is "+getBreed()+" which is a type of Cat";
 	}
 	public void sleep(){
-		System.out.println("Cat is a sleep");
+		System.out.println("Cat is sleeping");
 	}
 	public void walk(){
-		System.out.println("Cat is walking");
+		System.out.println("Cat is walking, has mammalFactor: "+Mammal.MammalFactorSmall);
 	}
 	
 	/*Setters and getters*/
@@ -44,6 +44,6 @@ public class Cat extends Pet implements Mammal {
 	
 	/*overriding toString method from the Object class*/
 	public String toString(){
-		return "Name: "+getName()+"\nBreed: "+getBreed()+"\nAge:"+getAge()+"\nColor: "+getColor()+"\nisFemale: "+getIsFemale()+"\nNumber of lives left: "+getNumberOfLives()+"\n";
+		return "\nCat:\n"+super.toString()+"Number of lives left: "+getNumberOfLives()+"\n";
 	}
 }

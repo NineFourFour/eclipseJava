@@ -36,12 +36,19 @@ public class testPetObjects {
 		String hammond = ownerHamster.toString();
 		System.out.println(hammond);
 		
-		
+		System.out.println("\nOwners Pets");
 		Pet[] ownersPets = {ownerCat, ownerDog, ownerHamster, ownerSnake, new Dog("Murdock", "GermanShepard", 2, "Black/Tan", Gender.MALE, MicroChipped.IS_MICRO_CHIPPED)};
 		Owner newOwner = new Owner("John Murphy", "49 wood lawn Road", "3531345678", ownersPets);
 		String owner = newOwner.toString();
 		System.out.println(owner);
 		
+		for(Pet p : ownersPets){
+			
+			if(p instanceof Mammal)
+				((Mammal)p).walk();
+			if(p instanceof Dog)
+				((Dog)p).sleep();
+		}
 		
 		
 	}

@@ -19,5 +19,7 @@ public class Hamster extends Pet implements Mammal {
 		System.out.println("Hamster is walking");
 	}
 	
-
+	public String toString(){
+		return "\nHamster\n"+super.toString();
+	}
 }
