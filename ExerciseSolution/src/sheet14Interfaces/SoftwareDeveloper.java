@@ -7,15 +7,17 @@
  */
 package sheet14Interfaces;
 
+import java.time.LocalDate;
+
 public class SoftwareDeveloper extends Trainee {
 	
 	public SoftwareDeveloper(){
 		
 	}
-	public SoftwareDeveloper(String name, String dateOfBirth, String rsiNumber){
+	public SoftwareDeveloper(String name, LocalDate dateOfBirth, String rsiNumber){
 		super(name, dateOfBirth,rsiNumber);
 	}
 	public String toString(){
-		return String.format("\nSoftware Developer Name: %s\nDate Of Birth: %s\nRSI Number: %s", this.name, this.dateOfBirth, this.rsiNumber);
+		return super.toString();
 	}
 }

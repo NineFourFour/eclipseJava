@@ -7,15 +7,17 @@
  */
 package sheet14Interfaces;
 
+import java.time.LocalDate;
+
 public class ComputerAidedDesign extends Trainee {
 
 	public ComputerAidedDesign(){
 		
 	}
-	public ComputerAidedDesign(String name, String dateOfBirth, String rsiNumber){
+	public ComputerAidedDesign(String name, LocalDate dateOfBirth, String rsiNumber){
 		super(name, dateOfBirth, rsiNumber);
 	}
 	public String toString(){
-		return String.format("\nComputer Aided Design\nName: %s\nDate Of Birth: %s\nRSI Number: %s", this.name, this.dateOfBirth, this.rsiNumber);
+		return super.toString();
 	}
 }

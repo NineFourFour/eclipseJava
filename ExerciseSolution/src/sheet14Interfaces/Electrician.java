@@ -7,34 +7,57 @@
  */
 package sheet14Interfaces;
 
+import java.time.LocalDate;
+
 public class Electrician extends Trainee implements Apprentice {
 	Phase phase;
 	String employerName;
 	
-
+	/*Constructors*/
 	public Electrician() {
-	
+		
 	}	
-	public Electrician(String name, String dateOfBirth, String rsiNumber, Phase phase, String employerName){
+	public Electrician(String name, LocalDate dateOfBirth, String rsiNumber, Phase phase, String employerName){
 			super(name, dateOfBirth, rsiNumber);
-			this.phase = phase;
+			try{
+				setPhase(phase);
+			}catch(InvalidPhaseException ipe){
+				System.out.println("ERROR: "+ipe.getMessage());
+			}
 			this.employerName = employerName;
 	}
 	
-	
-	public void setPhase(Phase phase){
+	/*Implement the methods in the interface Apprentice*/
+	public int exceptionPhase(Phase phase){
+		int value = 0;
+		if(phase.getPhase()<1 ||phase.getPhase()>6){
+			return value;
+		}else
+			this.phase = phase;
+			return value = 1;
+	}
+	public void setPhase(Phase phase)throws InvalidPhaseException{
+		if(phase.getPhase()<0 || phase.getPhase()> 6){
+			this.phase = Phase.PHASE_SEVEN;
+			throw new InvalidPhaseException("Invalid value");
+		}
 		this.phase = phase;
+			
+	}
+	public void setPhase(int phase){
+		
 	}
 	public void setEmployerName(String employerName){
 		this.employerName = employerName;
 	}
-	public Phase getPhase(){
-		return this.phase;
+	public int getPhase(){
+		return this.phase.getPhase();
 	}
 	public String getEmployerName(){
 		return this.employerName;
 	}
 	public String toString(){
-		return String.format("\nElectrician Name: %s\nDate Of Birth: %s\nRSI Number: %s\nPhase: %d\nEmployers Name: %s", this.name, this.dateOfBirth, this.rsiNumber, this.phase.getPhase(),this.employerName);
+		return super.toString()+"\nPhase: "+(this.phase.getPhase() == 7? "No value": this.phase.getPhase())+""
+						+ "\nEmployers Name: "+this.employerName;
 	}
 }

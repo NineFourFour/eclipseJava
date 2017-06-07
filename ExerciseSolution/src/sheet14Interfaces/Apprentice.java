@@ -10,8 +10,12 @@ package sheet14Interfaces;
 public interface Apprentice {
 
 	
-	public void setPhase(Phase phase);
-	public Phase getPhase();
-	public void setEmployerName(String employersName);
-	public String getEmployerName();
+	void setPhase(int phase);
+	int getPhase();
+	void setEmployerName(String employersName);
+	String getEmployerName();
 }
+
+
+
+

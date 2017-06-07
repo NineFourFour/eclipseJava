@@ -14,7 +14,8 @@ public enum Phase {
 	PHASE_THREE(3),
 	PHASE_FOUR(4),
 	PHASE_FIVE(5),
-	PHASE_SIX9(6);
+	PHASE_SIX(6),
+	PHASE_SEVEN(7);
 	
 	int phase;
 	

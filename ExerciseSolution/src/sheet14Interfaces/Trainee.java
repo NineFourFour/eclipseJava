@@ -7,15 +7,19 @@
  */
 package sheet14Interfaces;
 
-public class Trainee {
-	String name;
-	String dateOfBirth;
-	String rsiNumber;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+
+public abstract class Trainee {
+	private String name;
+	private LocalDate dateOfBirth;
+	private String rsiNumber;
 	
 	public Trainee(){
 		
 	}
-	public Trainee(String name, String dateOfBirth, String rsiNumber){
+	public Trainee(String name, LocalDate dateOfBirth, String rsiNumber){
 		this.name = name;
 		this.dateOfBirth = dateOfBirth;
 		this.rsiNumber = rsiNumber;
@@ -24,7 +28,7 @@ public class Trainee {
 	public void setName(String name){
 		this.name = name;
 	}
-	public void setDateOfBirth(String dateOfBirth){
+	public void setDateOfBirth(LocalDate dateOfBirth){
 		this.dateOfBirth = dateOfBirth;
 	}
 	public void setRsiNumber(String rsiNumber){
@@ -34,7 +38,7 @@ public class Trainee {
 	public String getName(){
 		return this.name;
 	}
-	public String getDateOfBirth(){
+	public LocalDate getDateOfBirth(){
 		return this.dateOfBirth;
 	}
 	public String getRsiNumber(){
@@ -42,6 +46,7 @@ public class Trainee {
 	}
 	
 	public String toString(){
-		return "\n\tName: "+this.name+"\n\tDate of Birth: "+this.dateOfBirth+"\n\tRSI Number: "+this.rsiNumber;
+		DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM);
+		return this.getClass().getSimpleName()+"Name: "+this.name+"\nDate of Birth: "+dateOfBirth.format(formatter)+"\nRSI Number: "+this.rsiNumber;
 	}
 }
