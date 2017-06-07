@@ -1,6 +1,10 @@
 package sheet15Exceptions;
 
 public class InvalidWeekdayException extends Exception {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String message;
 	
 	public InvalidWeekdayException(){

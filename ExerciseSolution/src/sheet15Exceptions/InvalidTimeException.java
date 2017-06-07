@@ -1,6 +1,10 @@
 package sheet15Exceptions;
 
 public class InvalidTimeException extends Exception{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String message;
 	
 	public InvalidTimeException(){

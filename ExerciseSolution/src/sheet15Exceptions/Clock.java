@@ -3,7 +3,8 @@ package sheet15Exceptions;
 
 
 public class Clock {
-static int number = 0;
+	
+	static int number = 0;
 	
 	private int hours;
 	private int minutes;
@@ -13,21 +14,42 @@ static int number = 0;
 	public Clock(){
 		number++;
 		this.hours = 12;
+		this.minutes = 0;
+		this.seconds = 0;
 	}
-
+	/*added in the exceptions to the constructor*/
 	public Clock(int hours,int minutes, int seconds){
 		this();
+		try{
+			setHours(hours);
+		}catch(InvalidTimeException ite){
+			System.out.println("ERROR: "+ite.getMessage());
+		}
+		try{
+			setMinutes(minutes);
+		}catch(InvalidTimeException ite){
+			System.out.println("ERROR: "+ite.getMessage());
+		}
+		try{
+			setSeconds(seconds);	
+		}catch(InvalidTimeException ite){
+			System.out.println("ERROR: "+ite.getMessage());
+		}
+	}
+	/*getters and setters*/
+	public void setHours (int hours)throws InvalidTimeException{
+		if(hours > 23)
+			throw new InvalidTimeException("Hours must be less than 24");
 		this.hours = hours;
-		this.minutes = minutes;
-		this.seconds = seconds;
 	}
-	public void setHours(int hours){
-		this.hours = hours;
-	}
-	public void setMinutes(int minutes){
+	public void setMinutes(int minutes)throws InvalidTimeException{
+		if(minutes > 59)
+			throw new InvalidTimeException("Minutes must be less than 60");
 		this.minutes = minutes;
 	}
-	public void setSeconds(int seconds){
+	public void setSeconds(int seconds)throws InvalidTimeException{
+		if(seconds > 59)
+			throw new InvalidTimeException("Seconds must be less than 60");
 		this.seconds = seconds;
 	}
 	public int getHours(){
@@ -95,6 +117,6 @@ static int number = 0;
 		}		
 	}
 	public String toString(){
-		return "\tClock C"+Clock.number+" "+this.hours+":"+this.minutes+":"+this.seconds;
+		return "\tClock C"+Clock.number+" "+this.hours+":"+(this.minutes < 10? this.minutes+"0": this.minutes)+":"+(this.seconds<10? this.seconds+"0":this.seconds);
 	}
 }

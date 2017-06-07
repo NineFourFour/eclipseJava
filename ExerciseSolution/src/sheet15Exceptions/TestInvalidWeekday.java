@@ -5,9 +5,11 @@ import sheet15Exceptions.Weekday.dayOfTheWeek;
 public class TestInvalidWeekday {
 	public static void main(String[] args) {
 		Weekday w = new Weekday();
-		System.out.println(w);
+		System.out.println("Weekday : "+w);
 		try{
 			w.setWeekDay(dayOfTheWeek.MONDAY.toString());
+			System.out.println(w);
+			w.setWeekDay(dayOfTheWeek.SATURDAY);
 		}catch(InvalidWeekdayException iwe){
 			System.out.println("Error: "+iwe.getMessage());
 		}

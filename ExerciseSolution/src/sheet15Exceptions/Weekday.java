@@ -3,8 +3,10 @@ package sheet15Exceptions;
 public class Weekday {
 	
 	private String weekDay;
+	
 	enum dayOfTheWeek{MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY};
 	dayOfTheWeek day;
+	
 	public Weekday(){
 		this.weekDay = dayOfTheWeek.FRIDAY.toString();
 	}
@@ -34,6 +36,14 @@ public class Weekday {
 			else
 				 
 				this.weekDay = weekDay.toUpperCase();
+	}
+	public void setWeekDay(dayOfTheWeek day)throws InvalidWeekdayException {
+		
+			if(day.toString().equals("sunday")||day.toString().equals("saturday"))
+				throw new InvalidWeekdayException("Invalid Weekday"); 
+			else
+				 
+				this.weekDay = day.toString();
 	}
 	public void setFriday(dayOfTheWeek day) throws InvalidWeekdayException{
 		if(!day.toString().equals("FRIDAY"))
