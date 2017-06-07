@@ -18,23 +18,11 @@ public class Clock {
 		this.seconds = 0;
 	}
 	/*added in the exceptions to the constructor*/
-	public Clock(int hours,int minutes, int seconds){
+	public Clock(int hours,int minutes, int seconds)throws InvalidTimeException{
 		this();
-		try{
-			setHours(hours);
-		}catch(InvalidTimeException ite){
-			System.out.println("ERROR: "+ite.getMessage());
-		}
-		try{
-			setMinutes(minutes);
-		}catch(InvalidTimeException ite){
-			System.out.println("ERROR: "+ite.getMessage());
-		}
-		try{
-			setSeconds(seconds);	
-		}catch(InvalidTimeException ite){
-			System.out.println("ERROR: "+ite.getMessage());
-		}
+		setHours(hours);
+		setMinutes(minutes);
+		setSeconds(seconds);	
 	}
 	/*getters and setters*/
 	public void setHours (int hours)throws InvalidTimeException{
@@ -63,11 +51,11 @@ public class Clock {
 	}
 	public void setTime(int hours, int minutes, int seconds)throws InvalidTimeException{
 		if(hours > 24)
-			throw new InvalidTimeException("Hours greater than 24");
-		else if(minutes > 60)
-			throw new InvalidTimeException("Minutes greater than 60");
-		else if(seconds > 60)
-			throw new InvalidTimeException("Seconds greater than 60");
+			throw new InvalidTimeException("setTime: Hours greater than 24");
+		if(minutes > 59)
+			throw new InvalidTimeException("setTime: Minutes must be less than 60");
+		if(seconds > 60)
+			throw new InvalidTimeException("setTime: Seconds greater than 60");
 		else{
 			this.hours = hours;
 			this.minutes = minutes;
