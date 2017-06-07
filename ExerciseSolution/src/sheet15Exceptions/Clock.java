@@ -75,10 +75,6 @@ public class Clock {
 		}
 			
 	}
-	public void getTime(){	
-		String s = "\n\tString s = "+(this.hours < 10 ? "0"+this.hours : ""+this.hours)+":"+(this.minutes < 10 ? "0"+this.minutes : ""+this.minutes)+":"+(this.seconds < 10 ? "0"+this.seconds : ""+this.seconds);
-		System.out.println(s);
-	}
 	public void incrementHours(int hours){
 		this.hours +=hours;
 		if(this.hours >= 24)
