@@ -12,44 +12,41 @@ public class Test {
 
 		
 		Employee e2 = new Employee("James");
-		e2.setName("nineFour");
-		try{
-			e2.setAge(0);
-		}catch(InvalidAgeException iae){
-			System.out.println("\n\tNew Exception: "+iae.message);
-		}
-		;
-		e2.setSalary(70_000);
-		e2.setNoOfSickDays(2);
-		e2.setEmployeeNumber(9494);
-		System.out.print("\n\tNo: "+Employee.number);
-		System.out.print("\n\t"+e2.toString());
-		System.out.print("\n");
+		System.out.print("\nNo of Employees: "+Employee.numberOfEmployees);
 		
 		Employee e3 = new Employee();
-		e3.setName("Hannibal");
+		
 		try{
-			e3.setAge(70);
+			e2.setAge(19);
+			e2.setName("nineFour");
+			e3.setAge(65);
+			e3.setName("Hannibal");
+			System.out.print("\nNo of Employees: "+Employee.numberOfEmployees);
+			Employee e4 = new Employee("Earl", 23, 234, 4, 9898);
+			System.out.println("\n\n"+e4);
+			e4.setAge(34);
+			System.out.println(e4);
+			e2.setSalary(70_000);
+			e3.setSalary(100_000);
 		}catch(InvalidAgeException iae){
-			System.out.println("Error: "+iae.message);
+			System.out.println("\nError: "+iae.getMessage());
+		}catch(NameTooLongException nte){
+			System.out.println("ERROR: "+nte.getMessage());
+		}catch(SalaryTooHighException ste){
+			System.out.println("ERROR: "+ste.getMessage());
 		}
 		
-		e3.setSalary(100_000);
+		
+		e2.setNoOfSickDays(2);
+		e2.setEmployeeNumber(9494);
+		
+		System.out.print("\n"+e2);
+		System.out.print("\n");
+		
 		e3.setNoOfSickDays(0);
 		e3.setEmployeeNumber(9696);
-		System.out.print("\n\tNo: "+Employee.number);
-		System.out.print("\n\t"+e3.toString());
-		System.out.print("\n");
-		System.out.printf("\nNumber of Employees : %d\n\n",Employee.number);
 		
-		Employee e4 = new Employee("Earl", 12, 234, 4, 9898);
-		System.out.println(e4);
-		try{
-			e4.setAge(34);
-		}catch(InvalidAgeException iae){
-			System.out.println("Error: "+iae.message);
-		}
-		System.out.println(e4);
-		System.out.printf("\nNumber of Employees : %d\n\n",Employee.number);
+		System.out.print(e3);
+		System.out.printf("\nNo of Employees : %d\n\n",Employee.numberOfEmployees);
 	}
 }

@@ -5,7 +5,7 @@ package sheet15Exceptions;
 public class TestClock {
 	public static void main(String[] args){
 		
-		/*Clock c1 = new Clock();
+		Clock c1 = new Clock();
 		System.out.println(c1);
 		try{
 			System.out.println("\n\tSet hours to 25");
@@ -19,7 +19,7 @@ public class TestClock {
 			System.out.println(c2);
 		}catch(InvalidTimeException ite){
 			System.out.println("ERROR: "+ite.getLocalizedMessage());
-		}*/
+		}
 			
 		try{
 			Clock c3 = new Clock(13, 43, 5);
@@ -31,7 +31,8 @@ public class TestClock {
 			System.out.println("ERROR: "+ite.getMessage());
 
 		}finally{
-			System.out.println("\n\nIn the final block which always prints");
+			System.out.println("\n\ntry requires either a catch block(one of a more)\nor a finially block"
+					+ ". If the final block is there, it always excutes");
 		}
 		
 	}

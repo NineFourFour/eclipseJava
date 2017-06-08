@@ -11,13 +11,13 @@ public class TestInvalidWeekday {
 			System.out.println(w);
 			w.setWeekDay(dayOfTheWeek.SATURDAY);
 		}catch(InvalidWeekdayException iwe){
-			System.out.println("Error: "+iwe.getMessage());
+			System.out.println("\nError: "+iwe.getMessage());
 		}
 		System.out.println(w);
 		try{
 			w.setFriday(dayOfTheWeek.SATURDAY);
 		}catch(InvalidWeekdayException iwe){
-			System.out.println("Error: "+iwe.getMessage());
+			System.out.println("\nError: "+iwe.getMessage());
 		}
 		System.out.println(w);
 	}

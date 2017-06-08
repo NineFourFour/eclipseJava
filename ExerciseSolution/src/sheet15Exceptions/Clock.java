@@ -2,10 +2,9 @@ package sheet15Exceptions;
 
 
 
-public class Clock {
+public class Clock{
 	
 	static int number = 0;
-	
 	private int hours;
 	private int minutes;
 	private int seconds;
@@ -27,17 +26,17 @@ public class Clock {
 	/*getters and setters*/
 	public void setHours (int hours)throws InvalidTimeException{
 		if(hours > 23)
-			throw new InvalidTimeException("Hours must be less than 24");
+			throw new InvalidTimeException("setHours(int): Hours must be less than 24");
 		this.hours = hours;
 	}
 	public void setMinutes(int minutes)throws InvalidTimeException{
 		if(minutes > 59)
-			throw new InvalidTimeException("Minutes must be less than 60");
+			throw new InvalidTimeException("setMinutes(int):Minutes must be less than 60");
 		this.minutes = minutes;
 	}
 	public void setSeconds(int seconds)throws InvalidTimeException{
 		if(seconds > 59)
-			throw new InvalidTimeException("Seconds must be less than 60");
+			throw new InvalidTimeException("setSeconds(int): Seconds must be less than 60");
 		this.seconds = seconds;
 	}
 	public int getHours(){

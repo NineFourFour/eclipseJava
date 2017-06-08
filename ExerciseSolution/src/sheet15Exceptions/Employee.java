@@ -8,9 +8,8 @@
 package sheet15Exceptions;
 
 public class Employee {
-	static int number = 0;
-	//static int employeeNumber =9494;
-	private int no;
+	
+	static int numberOfEmployees = 0;
 	private String name;
 	private int age;
 	private double salary;
@@ -18,7 +17,7 @@ public class Employee {
 	private int employeeNumber;
 	/*is this the default constructor or a zero parameter constructor*/
 	public Employee(){
-		this.no = number++;
+		numberOfEmployees++;
 	}
 	/*use this to call the class within in the class, below this(); calls the constructor above
 	 * so number is updated */
@@ -26,42 +25,29 @@ public class Employee {
 		this();
 		this.name = name;
 	}
-	public Employee(String name, int age, double salary, int noOfSickDays, int employeeNumber){
+	public Employee(String name, int age, double salary, int noOfSickDays, int employeeNumber)throws InvalidAgeException,NameTooLongException,SalaryTooHighException{
 		this();
-		this.name = name;
-		this.salary = salary;
-		this.noOfSickDays = noOfSickDays;
-		this.employeeNumber = employeeNumber;
-		try{
-			setAge(age);
-		}catch(InvalidAgeException iae){
-			System.out.println("Inside\n\tNew Exception: "+iae.message);
-		}
+		setName(name);
+		setSalary(salary);
+		setNoOfSickDays(noOfSickDays);
+		setEmployeeNumber(employeeNumber);
+		setAge(age);
 	}
-	public void setName(String name){
+	public void setName(String name)throws NameTooLongException{
+		if (name.length()>10)
+			throw new NameTooLongException("setName(String): too many letters in name saquence");
 		this.name = name;
 	}
-	/*public void setAge(int age){
-		try{
-			 if (age < 18 || age > 67) {
-			       throw new InvalidAgeException("ERROR: Age is not with in range, must be between 18 and 67");
-			 }else{
-				 this.age = age;
-			 }
-		}catch(InvalidAgeException iae){
-			System.out.println("\n\tNew Exception: "+iae.message);
-		}
-	}*/
 	public void setAge(int age)throws InvalidAgeException{
 	
 		 if (age < 18 || age > 67) {
-		       throw new InvalidAgeException("Age is not with in range, must be between 18 and 67");
-		 }else{
-			 this.age = age;
+		       throw new InvalidAgeException("setAge(int): Age is not with in range, must be between 18 and 67");
 		 }
-
+		 this.age = age;
 	}
-	public void setSalary(double salary){
+	public void setSalary(double salary)throws SalaryTooHighException{
+		if(salary > 50_000)
+			throw new SalaryTooHighException("setSalary(double): Too much, make it lower");
 		this.salary = salary;
 	}
 	public void setNoOfSickDays(int noOfSickDays){
@@ -84,9 +70,6 @@ public class Employee {
 	}
 	public int getEmployeeNumber(){
 		return this.employeeNumber;
-	}
-	public int getNo(){
-		return this.no;
 	}
 	public String toString(){
 		String s = "Name: "+this.name+"\tAge: "+this.age+"\tSalary: "+this.salary+"\tNo of sick days:"+this.noOfSickDays+"\tEmployee number:"+this.employeeNumber;

@@ -12,17 +12,12 @@ public class InvalidAgeException extends Exception {
 	
 	private static final long serialVersionUID = 1L;
 	
-	public String message;
-	
 	public InvalidAgeException(){
 		
 	}
 	public InvalidAgeException(String message){
-		super();
-		this.message = message; 
+		super(message);
+		 
 	}
-	/*public InvalidAgeException(Throwable cause) {
-	        super(cause);
-	}*/
 	
 }
