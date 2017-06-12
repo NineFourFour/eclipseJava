@@ -29,6 +29,8 @@ public class Ex4ReverseInput {
 		/*to convert a char array back to a string: str = String.valueOf(cArray)
 		 * if you use toString method then you get a location in memory*/
 		String charArrayToString = String.valueOf(cArray);
+		//String newStringCharArray = new String(cArray);
+		//System.out.println(newStringCharArray);
 		System.out.println("\n\t"+charArrayToString);
 		
 		input.close();

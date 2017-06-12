@@ -23,6 +23,14 @@ public class Ex2replace {
 		todayMenu = todayMenu.replace(" and Ice Cream", "");
 		System.out.print("\n\td)"+todayMenu);
 		
+		Integer x = 7;
+		int y = 2;
+		
+		System.out.println("\n\n"+(x *= x));
+		System.out.println(y*=y);
+		System.out.println(y*=y);
+		System.out.println(x-=y);
+		
 		
 	}
 }

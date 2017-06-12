@@ -34,6 +34,10 @@ public class Ex8 {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter a sentence: ");
 		String inputString = input.nextLine();
+		System.out.println(inputString = inputString.intern());
+		
+		
+		
 		String[] words = inputString.split(" ");
 		System.out.println("Number of words: "+words.length);
 		char[] inputStringCharArray = new char[inputString.length()];
