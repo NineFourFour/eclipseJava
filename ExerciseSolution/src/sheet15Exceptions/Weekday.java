@@ -45,7 +45,12 @@ public class Weekday {
 			this.weekDay = day.toString();
 	}
 	public String toString(){
-		return "\nDay of the week: "+this.weekDay;
+		char first = this.weekDay.charAt(0);
+		first = Character.toUpperCase(first);
+		//System.out.println("\n\n"+first);
+		String restOfweekDay = this.weekDay.substring(1).toLowerCase();
+		//System.out.println(restOfweekDay);
+		return "\nDay of the week: "+first+restOfweekDay;
 	}
 	
 }

@@ -20,5 +20,7 @@ public class TestInvalidWeekday {
 			System.out.println("\nError: "+iwe.getMessage());
 		}
 		System.out.println(w);
+
+		
 	}
 }
