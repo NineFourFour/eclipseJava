@@ -43,13 +43,14 @@ public class Ex8 {
 		 * 
 		 * */
 		String[] words = inputString.split(" ");
-		
+		/*number of strings in the array*/
 		System.out.println("Number of words: "+words.length);
+		/*count the chars in the string*/
 		char[] inputStringCharArray = new char[inputString.length()];
-		
 		for(int i=0; i< inputString.length(); i++){
 			inputStringCharArray[i] = inputString.charAt(i);
 		}
+		/*count the number of spaces in the string*/
 		int counter=0;
 		for(int i=0; i< inputString.length(); i++){
 			if (inputStringCharArray[i] == ' ')
