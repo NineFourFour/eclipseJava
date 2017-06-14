@@ -32,13 +32,18 @@ public class Ex8 {
 		Today	is	Thursday*/
 
 		Scanner input = new Scanner(System.in);
-		System.out.println("Enter a sentence: ");
+		System.out.print("Enter a sentence: ");
 		String inputString = input.nextLine();
 		System.out.println(inputString = inputString.intern());
 		
 		
-		
+		/*
+		 * split string in to a string array, split into separate tokens using a regex. In this 
+		 * case using the space between each word
+		 * 
+		 * */
 		String[] words = inputString.split(" ");
+		
 		System.out.println("Number of words: "+words.length);
 		char[] inputStringCharArray = new char[inputString.length()];
 		
