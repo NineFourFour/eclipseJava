@@ -22,5 +22,8 @@ public class TestInvalidWeekday {
 		System.out.println(w);
 
 		
+		
+	
+		
 	}
 }

@@ -8,7 +8,27 @@ import java.util.Scanner;
 
 public class ArrayListsExercise {
 	public static void main(String[] args) {
-	/*Exercise 1*/	
+		/*String one = "first";
+		String two = "Second";
+		String three = "Third";
+		String four = "Fourth";
+		String five = "fifth";
+		String six = "sixth";
+		String[] stringArray = {one, two, three, four, five, six};
+		
+		ArrayList<String> newArrayList = new ArrayList<>();
+		newArrayList.add(five);
+		newArrayList.addAll(0,Arrays.asList(stringArray));
+		System.out.println(newArrayList);
+		
+		
+		ArrayList<int[][]> intArray = new ArrayList<>();*/
+		
+		
+		
+		
+		
+		/*Exercise 1*/	
 	//a)
 		System.out.println("\nExercise 1");
 		System.out.println("\nArrayList of names\n\n\n");

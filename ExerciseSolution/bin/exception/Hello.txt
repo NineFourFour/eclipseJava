@@ -1,0 +1,3 @@
+Hello
+src/exception/ to put file in this folder otherwise it goes to the root folder which in this case is ExerciseSolution
+

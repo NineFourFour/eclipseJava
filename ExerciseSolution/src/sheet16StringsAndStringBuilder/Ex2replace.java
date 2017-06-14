@@ -19,6 +19,7 @@ public class Ex2replace {
 		System.out.print("\n\tb)"+todayMenu);
 		todayMenu = todayMenu.replace('.', ',');
 		todayMenu = todayMenu+" Jelly and Ice Cream for Desert";
+		/*or use .concat(" Jelly and Ice Cream for Desert")*/
 		System.out.print("\n\tc)"+todayMenu);
 		todayMenu = todayMenu.replace(" and Ice Cream", "");
 		System.out.print("\n\td)"+todayMenu);

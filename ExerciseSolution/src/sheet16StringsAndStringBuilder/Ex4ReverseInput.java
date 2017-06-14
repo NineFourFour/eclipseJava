@@ -16,7 +16,7 @@ public class Ex4ReverseInput {
 		
 		
 		Scanner input = new Scanner(System.in);
-		System.out.println("\nReverse a sentence\nEnter sentence here: ");
+		System.out.print("\nReverse a sentence\nEnter sentence here: ");
 		String s = input.nextLine();
 		char[] cArray = new char[s.length()];
 		//System.out.println(s.length());

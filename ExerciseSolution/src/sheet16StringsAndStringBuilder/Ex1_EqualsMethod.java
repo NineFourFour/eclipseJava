@@ -1,6 +1,6 @@
 package sheet16StringsAndStringBuilder;
 
-import java.util.Scanner;
+
 
 public class Ex1_EqualsMethod {
 	public static void main(String[] args) {
