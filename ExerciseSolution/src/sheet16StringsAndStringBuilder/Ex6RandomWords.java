@@ -34,17 +34,14 @@ public class Ex6RandomWords {
 
 		String[] words = {"System","Scanner","public","protected","increment"};
 		Scanner input = new Scanner(System.in);
-		
-		
-		
-		
+	
 		int incorrectAns=0;
 		while(incorrectAns < 8){
 			int randomNumber = (int)(Math.random()*5);
 			//System.out.println(randomNumber);
 			String word = words[randomNumber];
 			System.out.println("A word has been chosen at random, please guess a letter: ");
-			String s = input.next();
+			char s = input.next().charAt(0);
 			int index = word.indexOf(s);
 			if(index > -1)
 				System.out.printf("\nRandom Word : %s\nChar \"%s\" was found at index: %d\n",word,s,index);
@@ -52,12 +49,7 @@ public class Ex6RandomWords {
 			if(index == -1)
 				incorrectAns++;
 		}
-		
-		
-		
 		input.close();
-	
-	
 	
 	}
 }

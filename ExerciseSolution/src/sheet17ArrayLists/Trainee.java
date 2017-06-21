@@ -36,7 +36,7 @@ public class Trainee {
 	/*overriding methods in object class*/
 	public boolean equals(Object obj){
 		Trainee other = (Trainee) obj;
-		if(this.name == other.name && this.address == other.address && this.birthday.equals(other.birthday))
+		if(this.name.equals(other.name) && this.address.equals(other.address) && this.birthday.equals(other.birthday))
 			return true;
 		else 
 			return false;

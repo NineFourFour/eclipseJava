@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class Test {
@@ -34,16 +35,13 @@ public class Test {
 		//System.out.println("\n\n"+tChange);
 		tChange.setAddress("24 bird road");
 		//System.out.println("\n\n"+tChange);
+		listArray.get(3).setAddress("34 Bird Road");
 		System.out.println(listArray);
 	//f)
 		Scanner input = new Scanner(System.in);
 		System.out.println("\n\nEnter a name on the list: ");
 		String inputString = input.next();
-		//System.out.println("#4 iterator");
-		/*Iterator<String> iterator = list.iterator();
-		while (iterator.hasNext()) {
-			System.out.println(iterator.next());
-		}*/
+		
 		int count = 0;
 		for(int i=0; i<listArray.size(); i++){
 			
@@ -62,7 +60,9 @@ public class Test {
 	
 	//g)remove the trainee from part (f)
 	
-	
+		
+		//Trainee tOne = new Trainee("Tom", "95 main st", LocalDate.of(1970, Month.APRIL, 2));
+		//System.out.println(listArray.contains(tOne));
 		for(int i=0; i<listArray.size(); i++){
 			
 			Trainee tFor = listArray.get(i);
@@ -75,8 +75,16 @@ public class Test {
 		
 		System.out.println("\ng) Removed element found in array\n"+listArray);
 	
-		
-		
+	//h
+		Iterator<Trainee> iterator = listArray.iterator();
+		while(iterator.hasNext()){
+			Trainee currentTrainee = iterator.next();
+			System.out.println("\n\n"+currentTrainee.getName());
+			
+		}
+	//i
+		for(Trainee traineeOne: listArray)
+			System.out.println(traineeOne);
 		
 		input.close();
 	}
