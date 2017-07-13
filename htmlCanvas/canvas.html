@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style> 
+		#myDIV {
+		    width: 100px;
+		    height: 100px;
+		    background: red;
+		    position: relative;
+		 
+		    animation: mymove 10s infinite;/*keyframe properties: start, end; time it takes to move the distance, number of time it does this */
+		}
+		
+		@keyframes mymove {
+		    from {left: 0px;}
+		    to {left: 800px;}
+		}
+		
+		@keyframes mynewmove {
+		    from {top: 0px;}
+		    to {top: 600px;}
+		}
+		#space{
+			height: 200px;
+			  background: red;
+			width: 100px;
+		}
+		</style>
+	</head>
+	<body>
+	
+		<p>Change the direction.</p>
+		<button onclick="myFunction()">Try it</button>
+		<div id="space"></div>
+		<script>
+			function myFunction() {
+			    
+			    document.getElementById("myDIV").style.animation = "mynewmove 10s 2";
+			    
+			}
+		</script>
+		
+		<div id="myDIV">
+		
+		</div>
+		
+	</body>
+</html>
